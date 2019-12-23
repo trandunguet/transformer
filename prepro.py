@@ -22,12 +22,12 @@ def prepro(hp):
     hp: hyperparams. argparse.
     """
     logging.info("# Check if raw files exist")
-    train1 = "iwslt2016/de-en/train.tags.de-en.de"
-    train2 = "iwslt2016/de-en/train.tags.de-en.en"
-    eval1 = "iwslt2016/de-en/IWSLT16.TED.tst2013.de-en.de.xml"
-    eval2 = "iwslt2016/de-en/IWSLT16.TED.tst2013.de-en.en.xml"
-    test1 = "iwslt2016/de-en/IWSLT16.TED.tst2014.de-en.de.xml"
-    test2 = "iwslt2016/de-en/IWSLT16.TED.tst2014.de-en.en.xml"
+    train1 = "iwslt2016/en-vi/train.tags.en-vi.en"
+    train2 = "iwslt2016/en-vi/train.tags.en-vi.vi"
+    eval1 = "iwslt2016/en-vi/IWSLT15.TED.tst2012.en-vi.en.xml"
+    eval2 = "iwslt2016/en-vi/IWSLT15.TED.tst2012.en-vi.vi.xml"
+    test1 = "iwslt2016/en-vi/IWSLT15.TED.tst2013.en-vi.en.xml"
+    test2 = "iwslt2016/en-vi/IWSLT15.TED.tst2013.en-vi.vi.xml"
     for f in (train1, train2, eval1, eval2, test1, test2):
         if not os.path.isfile(f):
             raise FileNotFoundError(errno.ENOENT, os.strerror(errno.ENOENT), f)
